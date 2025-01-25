@@ -26,7 +26,7 @@ public class mergeSortedArr {
         for (int i = 0; i < n + m; i++) {
             System.out.print(arr1[i] + " ");
         }
-
+        scan.close();
     }
     public static void mergeSrtArr(int[] arr1, int[] arr2, int n, int m){
         
