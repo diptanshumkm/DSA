@@ -21,7 +21,7 @@
  */
 
 
-public class practice5 {
+public class AbstractClass {
     
     static abstract class Phone {
         protected String brand;

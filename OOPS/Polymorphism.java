@@ -3,7 +3,7 @@ Compile-Time Polymorphism (Static Polymorphism)
 Run-Time Polymorphism (Dynamic Polymorphism)-----------------------------*/
 
 
-public class practice3 {
+public class Polymorphism {
     
     static class Calci {
         /*

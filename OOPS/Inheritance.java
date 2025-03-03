@@ -16,7 +16,7 @@
  */
 
 
-public class practice7 {
+public class Inheritance {
     
     //-----------------------------------Single Level Inheritence-------------------------------------
     // public static class Parent {

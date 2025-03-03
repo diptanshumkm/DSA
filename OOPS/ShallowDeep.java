@@ -1,5 +1,5 @@
 
-public class practice2 {
+public class ShallowDeep {
     
     public static class Address {
         String city;

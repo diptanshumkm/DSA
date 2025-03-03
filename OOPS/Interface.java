@@ -34,7 +34,7 @@ Usage	                        Used for defining a contract that multiple classes
 */
 
 
-public class practice6 {
+public class Interface {
     
     //--------------------------------------------------BASIC INTERFACE---------------------------------------
     // public interface Bicycle {

@@ -1,5 +1,5 @@
 // -------------------------------------------Copy constructor---------------------------------------------------
-public class practice1 {
+public class CopyCtor {
     public static class Student {
         int age;
         String name;
