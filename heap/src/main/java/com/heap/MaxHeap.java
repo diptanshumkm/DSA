@@ -72,7 +72,12 @@ public class MaxHeap {
         System.out.println(heap);
     }
 
-
-    
+    public int getMax() {
+        if (!heap.isEmpty()) {
+            return heap.get(0);  // Return the root (max element)
+        } else {
+            throw new NoSuchElementException("Heap is empty!");
+        }
+    }
 
 }
