@@ -25,6 +25,7 @@ public class Polymorphism {
 
 
     /*  
+        ****************************RUNTIME POLYMORPHISM*******************************
         Method Overriding?
         Method Overriding occurs when a subclass (child class) provides a specific implementation of a method that is already defined in its superclass (parent class).
         The method in the subclass must have the same name, return type, and parameters as the method in the parent class.
