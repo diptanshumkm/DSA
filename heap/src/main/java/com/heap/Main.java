@@ -1,37 +1,44 @@
 package com.heap;
 
+import com.heap.MergeKSrtdLst.ListNode;
+
 public class Main {
+
+    public static class ListNode{
+        ListNode next;
+        int data;
+        ListNode(int data){
+            this.data = data;
+        }
+        ListNode(int val, ListNode next){
+            this.data = val;
+            this.next = next;
+        }
+    }
+
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        // MaxHeap maxHeap = new MaxHeap();
-        // maxHeap.insert(50);
-        // maxHeap.insert(40);
-        // maxHeap.insert(45);
-        // maxHeap.insert(30);
-        // maxHeap.insert(20);
-        // maxHeap.insert(35);
-        // maxHeap.insert(10);
-        // maxHeap.insert(60);
-
-        // maxHeap.display();
         
-        // maxHeap.extractMax();
-        // maxHeap.display();
+        MergeKSrtdLst mergeLl = new MergeKSrtdLst();
+
+          
+        ListNode l1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+        ListNode l2 = new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(100))));
+        ListNode l3 = new ListNode(6, new ListNode(7, new ListNode(8)));
+
+        ListNode arr[]= {l1, l2, l3};
         
-        // System.out.println(  maxHeap.getMax() );
+        ListNode result = mergeLl.mergeKLinkedList(arr);
 
-        kthElement ques = new kthElement();
-        // int arr[] = {10, 5, 20, 8, 12, 15, 2};
-
-        // int answer = ques.kthSmallestElement(3, arr);
-        // System.out.println(answer);
-
-        int arr[] = {12, 3, 5, 7, 19, 26, 15};
-
-        int answer = ques.kthLargestElement(3, arr);
-        System.out.println(answer);
+        while (result!=null) {
+            System.out.print(result.data);
+            if (result.next != null) {
+                System.out.print(" -> ");
+            }
+            result = result.next;
+        }
 
     }
 
