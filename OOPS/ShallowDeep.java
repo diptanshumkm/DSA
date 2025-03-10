@@ -1,55 +1,61 @@
+import java.util.ArrayList;
 
 public class ShallowDeep {
     
-    public static class Address {
-        String city;
-
-        Address(String city){
-            this.city = city;
-        }
-    }
-
-    public static class Person{
+    public static class Student {
+        String name;
         int age;
-        Address address;
+        ArrayList<Integer> grades;
 
-        Person(int age, Address add){
+        Student(int age, String name, ArrayList<Integer> gradeList){
             this.age = age;
-            this.address = add;
+            this.name = name;
+            this.grades = gradeList;
         }
-        // Shallow copy ctor
-        // Copies the age and the *reference* of the Address object (both persons share the same address)
-        // Person(Person p){
-        //     this.age = p.age;
-        //     this.address=p.address;
-        // }
 
-        // Deep copy ctor
-        Person(Person p){
-            this.age = p.age;
-            this.address = new Address(p.address.city); // Deep copy: creates a new Address object with the same city
+        // Shallow copy
+        Student(Student s){
+            this.name = s.name;
+            this.age = s.age;
+            this.grades = s.grades;
         }
+
+        // Deep Copy
+        // Student(Student stud){
+        //     this.name = stud.name;
+        //     this.age = stud.age;
+        //     this.grades = new ArrayList<>(stud.grades);
+        // }
 
         void displayInfo(){
             System.out.println(this.age);
-            System.out.println(this.address.city);
+            System.out.println(this.name);
+            System.out.println(this.grades);
         }
+        
     }
+
+
 
     public static void main(String[] args) {
-        Address address = new Address("Wellington");
-        Person per1 = new Person(22, address);
-        Person per2 = new Person(per1);
+        ArrayList<Integer> grade = new ArrayList<>();
+        grade.add(1);
+        grade.add(2);
+        grade.add(3);
+        grade.add(4);
+        grade.add(5);
 
-        per1.displayInfo();
-        System.out.println();
-        per2.displayInfo();
+        Student student = new Student(2, "Shivam", grade);
+        student.displayInfo();
 
-        address.city="Auckland";
-        per1.displayInfo();
-        System.err.println();
-        per2.displayInfo();
+        Student student1 = new Student(student);
+        student1.displayInfo();
 
-
+        System.out.println("---------------------------------------------------------------");
+        student1.grades.add(6);
+        student1.age = 5;
+        student.displayInfo();
+        student1.displayInfo();
     }
+
 }
