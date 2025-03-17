@@ -5,10 +5,8 @@ import java.util.*;
 
 
 // Assumes the graph is connected (i.e., all nodes are reachable from node 1).
-
 public class Traversals {
     
-
     public static ArrayList<Integer> bfsTraversal(int nodes, ArrayList<ArrayList<Integer>> adjList){
 
         Queue<Integer> queue = new LinkedList<>();
