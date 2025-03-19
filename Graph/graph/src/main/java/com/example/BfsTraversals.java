@@ -5,7 +5,7 @@ import java.util.*;
 
 
 // Assumes the graph is connected (i.e., all nodes are reachable from node 1).
-public class Traversals {
+public class BfsTraversals {
     
     public static ArrayList<Integer> bfsTraversal(int nodes, ArrayList<ArrayList<Integer>> adjList){
 
