@@ -25,7 +25,7 @@ public class KahnsAlgo {
         }
     }
 
-    static ArrayList<Integer> topoSortBfs(ArrayList<ArrayList<Integer>> adjList, int totalNode){
+    public  ArrayList<Integer> topoSortBfs(ArrayList<ArrayList<Integer>> adjList, int totalNode){
         ArrayList<Integer> answer  = new ArrayList<>();
         int[] inDegree = new int[totalNode];
 
@@ -64,6 +64,6 @@ public class KahnsAlgo {
         adjList.get(2).add(3);
         adjList.get(3).add(1);
 
-        System.out.println(topoSortBfs(adjList, totalNode));
+        // System.out.println(topoSortBfs(adjList, totalNode));
     }
 }
