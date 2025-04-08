@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.ArrayList;
 
-public class CombinationSum {
+public class CombinationSumI {
     
     public static void findCombination(int index, int target, int[] arr, ArrayList<Integer> ds, ArrayList<ArrayList<Integer>> answer){
 
