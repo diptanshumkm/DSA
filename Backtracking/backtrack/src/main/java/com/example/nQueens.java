@@ -5,8 +5,6 @@ import java.util.List;
 
 public class nQueens {
 
-
-
     public static boolean isSafe(int row, int coloum, char[][] board, int n){
         
         int drow = row;
@@ -66,11 +64,8 @@ public class nQueens {
 
     }
 
-
     public static List<List<String>> solveNQueens(int n){
-
         List<List<String>> answer = new ArrayList<>();
-
         char[][] board = new char[n][n];
 
         for(int i=0; i<n; i++){
@@ -78,15 +73,11 @@ public class nQueens {
                 board[i][j] = '.';
             }
         }
-
         fillBoard(0, board, answer, n);
-
         return answer;
     }
 
     
-
-
     public static void main(String[] args) {
         System.out.println(solveNQueens(4));
     }
