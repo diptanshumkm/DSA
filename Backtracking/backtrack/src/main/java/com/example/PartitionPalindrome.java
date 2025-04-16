@@ -1,7 +1,6 @@
 package com.example;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class PartitionPalindrome {
     
@@ -24,20 +23,15 @@ public class PartitionPalindrome {
         }
 
         for(int i=index; i<s.length(); i++){
-            
             if (isPalindrome(s, index, i)) {
                 ds.add(s.substring(index, i+1));
-                generatePalindrome(index+1, s, ds, answer);
+                generatePalindrome(i+1, s, ds, answer);
                 ds.remove(ds.size()-1);
             }
-
         }
-
-
     }
 
     public static List<List<String>> partition(String s){
-
         List<List<String>> answer = new ArrayList<>();
 
         generatePalindrome(0, s, new ArrayList<>(), answer);
@@ -47,8 +41,8 @@ public class PartitionPalindrome {
     }
 
     public static void main(String[] args) {
-        String s = "aabb";
-
+        String s = "aabc";
         System.out.println(partition(s));
     }
 }
+
