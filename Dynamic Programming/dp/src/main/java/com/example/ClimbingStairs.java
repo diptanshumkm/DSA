@@ -21,6 +21,7 @@ public class ClimbingStairs {
     }
     
     public static int climbingStairs(int n){
+
         int answer;
         int [] dp = new int[n+1];
         for(int i=0; i<dp.length; i++){
@@ -28,13 +29,25 @@ public class ClimbingStairs {
         }
 
         answer = calculateSol(n-1,dp);
-        
+
         return answer;
     }
 
 
     public static void main(String[] args) {
-        int n=20;
-        System.out.println(climbingStairs(n));
+        int n=4;
+        // System.out.println(climbingStairs(n));
+
+        // Optimized Tabulated Solution
+        int prev1 = 1;
+        int prev2 = 1;
+
+        for(int i = 2; i<n; i++){
+            int current = prev1+prev2;
+            prev2 = prev1;
+            prev1 = current;            
+        }
+        System.out.println(prev1);
+
     }
 }
