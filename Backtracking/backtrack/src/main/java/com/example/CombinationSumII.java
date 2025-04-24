@@ -65,8 +65,8 @@ public class CombinationSumII {
 
 
     public static void main(String[] args) {
-        int[] arr = {10, 1, 2, 7, 6, 1, 5};
-        int target = 8; 
+        int[] arr = {1,1,1,2,2};
+        int target = 4; 
 
         System.out.println(combinationSumOptimised(arr, target));
 
