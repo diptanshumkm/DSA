@@ -16,7 +16,7 @@ public class FrogKJumps {
 
         for(int j = 1; j <= k; j++){
             if (index - j >= 0 ) {
-                int cost = minEnergy(index - j, arr, n, k, dp) + Math.abs(arr[index] - arr[index-j]);
+                int cost = Math.abs(arr[index] - arr[index-j]) + minEnergy(index - j, arr, n, k, dp) ;
                 minEnergy = Math.min(minEnergy, cost);
             }
         }
