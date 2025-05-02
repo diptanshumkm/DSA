@@ -1,7 +1,5 @@
 package com.example;
 
-import java.util.Arrays;
-
 public class LongestComnSubSeq {
 
 
@@ -17,7 +15,7 @@ public class LongestComnSubSeq {
 
         // If equal
         if (s1.charAt(i) == s2.charAt(j)) {
-            return 1 + longCmnSubSeq(i-1, j-1, s1, s2, dp);
+            return dp[i][j] = 1 + longCmnSubSeq(i-1, j-1, s1, s2, dp);
         }
 
         // If not equal
