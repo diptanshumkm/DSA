@@ -51,8 +51,8 @@ public class LongestComnSubSeq {
 
     
     public static void main(String[] args) {
-        String s1 = "acdee";
-        String s2 = "cedee";
+        String s1 = "aczxdee";
+        String s2 = "cedecxze";
 
         int i = s1.length() - 1;
         int j = s2.length() - 1;
