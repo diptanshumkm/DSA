@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.Stack;
+
 public class LongestComnSubSeq {
 
 
@@ -44,15 +46,40 @@ public class LongestComnSubSeq {
 
             }
         }
-
+        // The below line prints LCS
+        System.out.println(printLcs(dp, s1, s2));
         return dp[n][m];
 
     }
 
+    public static StringBuilder printLcs(int[][] dp, String s1, String s2){
+
+        int n = s1.length();
+        int m = s2.length();
+        StringBuilder answer = new StringBuilder();
+
+        int i = n;
+        int j = m;
+
+        while (i > 0 && j > 0) {
+            if (s1.charAt(i-1) == s2.charAt(j-1)) {
+                answer.append(s1.charAt(i-1));
+                i--;
+                j--;
+
+            }else if (dp[i-1][j] > dp[i][j-1]) {
+                i--;
+            }else{
+                j--;
+            }
+        }
+        
+        return answer.reverse();
+    }
     
     public static void main(String[] args) {
-        String s1 = "aczxdee";
-        String s2 = "cedecxze";
+        String s1 = "acdee";
+        String s2 = "cedee";
 
         int i = s1.length() - 1;
         int j = s2.length() - 1;
