@@ -31,7 +31,7 @@ public class AbstractClass {
             this.IMEI = IMEI;
             this.brand = brand;
         }
-
+        
         abstract void call(String number);
 
         public void showBrand() {

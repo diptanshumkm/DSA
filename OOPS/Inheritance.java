@@ -19,17 +19,17 @@
 public class Inheritance {
     
     //-----------------------------------Single Level Inheritence-------------------------------------
-    // public static class Parent {
-    //     void display(){
-    //         System.out.println("This is Parent class...");
-    //     }
-    // }
+    public static class Parent {
+        void display(){
+            System.out.println("This is Parent class...");
+        }
+    }
 
-    // public static class Child extends Parent {
-    //     void show(){
-    //         System.out.println("This is child class");
-    //     } 
-    // }
+    public static class Child extends Parent {
+        void show(){
+            System.out.println("This is child class");
+        } 
+    }
 
 
     // -------------------------------------------Multi-Level Inheritance---------------------------------------------

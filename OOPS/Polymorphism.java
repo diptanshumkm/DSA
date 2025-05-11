@@ -15,6 +15,7 @@ public class Polymorphism {
                 The decision of which method to call is made at compile time.
         */
 
+        
         int add(int a, int b){
             return a+b;
         }
@@ -30,7 +31,7 @@ public class Polymorphism {
         Method Overriding occurs when a subclass (child class) provides a specific implementation of a method that is already defined in its superclass (parent class).
         The method in the subclass must have the same name, return type, and parameters as the method in the parent class.
         It allows runtime polymorphism, meaning the decision of which method to call is made at runtime based on the object
-     */
+    */
     static class Animal {
         void sound(){
             System.out.println("Animal makes sound");
@@ -44,6 +45,7 @@ public class Polymorphism {
             System.out.println("Dog barks...");
         }    
     }
+
     static class Cat extends Animal {
         @Override
         void sound(){
@@ -65,4 +67,5 @@ public class Polymorphism {
         a.sound();
 
     }
+
 }
