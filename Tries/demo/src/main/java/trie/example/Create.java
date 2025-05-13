@@ -17,7 +17,7 @@ public class Create {
             root = new TrieNode(); 
         }
 
-        public static void insert(String word){
+        public void insert(String word){
 
             TrieNode node = root;
             char[] wordArr = word.toCharArray();
@@ -34,10 +34,51 @@ public class Create {
             node.flag = true;
         }
 
+        //Search the entire word
+        public boolean search(String word){
+
+            TrieNode node = root;
+            char[] wordArr = word.toCharArray();
+            
+            for(char c: wordArr){
+                int index = c - 'a';
+
+                if(node.children[index] == null){
+                    return false;
+                }
+                node = node.children[index];
+            }
+            return node.flag;
+        }
+
+
+        // starts with
+        public boolean startsWith(String prefix){
+
+            TrieNode node = root;
+            char[] prefixArr = prefix.toCharArray();
+            for(char c: prefixArr){
+                int index = c - 'a';
+                if (node.children[index] == null) {
+                    return false;
+                }
+                node = node.children[index];
+            }
+
+            return true;
+        }
 
     }
 
-
+    public static void main(String[] args) {
+         Trie trie = new Trie();
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));   // true
+        System.out.println(trie.search("app"));     // false
+        System.out.println(trie.startsWith("app")); // true
+        trie.insert("app");
+        System.out.println(trie.search("app"));     // true
+    }
 
 
 }
