@@ -7,11 +7,13 @@ public class DiamondProb {
         }
 
     }
+
     static interface B extends A{
         default void display(){
             System.out.println("Hello from B");
         }    
     }
+
     static interface C extends A{
         default void display(){
             System.out.println("Hello from C");

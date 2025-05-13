@@ -9,13 +9,14 @@ public class Singleton {
     }
 
     //3 getter
-    public static Singleton getInstance(){
+    public synchronized static Singleton getInstance(){
         if (instance == null) {
-            return new Singleton();
+            instance = new Singleton();
         }
         return instance;
     } 
 
+    
     public static void showMessage() {
         System.out.println("Hello from Singleton!");
     }
@@ -23,9 +24,6 @@ public class Singleton {
     public static void main(String[] args) {
         Singleton s1 = Singleton.getInstance();
         Singleton s2 = Singleton.getInstance();
-
-     
-
         System.out.println(s1 + " " + s2);
     }
 

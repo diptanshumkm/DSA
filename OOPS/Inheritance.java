@@ -19,17 +19,17 @@
 public class Inheritance {
     
     //-----------------------------------Single Level Inheritence-------------------------------------
-    public static class Parent {
-        void display(){
-            System.out.println("This is Parent class...");
-        }
-    }
+    // public static class Parent {
+    //     void display(){
+    //         System.out.println("This is Parent class...");
+    //     }
+    // }
 
-    public static class Child extends Parent {
-        void show(){
-            System.out.println("This is child class");
-        } 
-    }
+    // public static class Child extends Parent {
+    //     void show(){
+    //         System.out.println("This is child class");
+    //     } 
+    // }
 
 
     // -------------------------------------------Multi-Level Inheritance---------------------------------------------
@@ -84,10 +84,19 @@ public class Inheritance {
     public static void main(String[] args) {
         
         //-----------------------------------Single Level Inheritence-------------------------------------
-        // Child obj = new Child();
+       
+        // Parent obj = new Child();
         // obj.display();  // Inherited method
         // obj.show();     // Child class method
-        
+
+        // Static typing check at compile time
+        // The compiler looks at the reference type (Parent) to see which methods are allowed. 
+        // Since Parent has no show() method, obj.show() is a “cannot find symbol” error.
+
+        // Polymorphism only applies to overridden methods
+        // Runtime polymorphism (dynamic dispatch) lets a subclass override a parent method 
+        // and have the subclass version called via a parent reference. 
+
 
         // -------------------------------------------Multi-Level Inheritance---------------------------------------------
         // Child obj = new Child();
