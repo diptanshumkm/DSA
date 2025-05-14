@@ -1,4 +1,4 @@
-import java.io.*;
+// import java.io.*;
 public class exceptionHandling {
 
     public static void validateAge(int age){
@@ -10,10 +10,20 @@ public class exceptionHandling {
 
     }
 
-    public static void fileReader(String file_path) throws IOException{
-        FileReader file = new FileReader(file_path);
-    }
+    public static void prac(){
+        int age = 20;
 
+        try{
+            age = age/10;
+            if (age<18) {
+                throw new ArithmeticException();
+            }
+
+        }catch(ArithmeticException e){
+            System.out.println(e + " Low age");
+        }
+
+    }
 
     public static void main(String[] args) {
         System.out.println();
@@ -65,19 +75,13 @@ public class exceptionHandling {
         System.out.println();
         System.out.println();
 
-        try{
-            fileReader("C:/Users/Diptanshu/Desktop/Informal txt.txt");
-            System.out.println("Done.........");
-        }catch(IOException e){
-            System.out.println("File not found");
-        }
-
-
 
         System.out.println();
         System.out.println();
 
 
-
+        prac();
+          System.out.println();
+        System.out.println();
     }
 }
